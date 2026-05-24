@@ -1,0 +1,28 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 8px;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+/* 自定义宽度模式：flex 纵向布局，每行独立控制对齐 */
+.video-grid--custom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+/* 自定义宽度模式的行 */
+.video-grid-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+/* 自定义宽度模式的视频容器单元 */
+.video-grid-cell {
+  flex: 0 0 auto;
+}

@@ -1,0 +1,76 @@
+.control-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.control-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  background-color: var(--control-bg);
+  color: inherit;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.control-btn:hover:not(:disabled) {
+  background-color: var(--control-hover-bg);
+}
+
+.control-btn:active:not(:disabled) {
+  background-color: var(--control-active-bg);
+}
+
+.control-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* 播放/暂停按钮稍微大一点，作为主要控制按钮 */
+.play-pause-btn {
+  font-size: 1.75rem;
+  padding: 0.6rem 1.2rem;
+}
+
+/* 自定义帧数跳转区域 */
+.frame-skip-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: 1px solid var(--separator-color);
+}
+
+/* 帧数输入框 */
+.frame-count-input {
+  width: 60px;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  background: var(--input-bg);
+  color: var(--input-text);
+  font-size: 1rem;
+  text-align: center;
+  transition: border-color 0.2s ease;
+}
+
+.frame-count-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* 隐藏数字输入框的箭头 */
+.frame-count-input::-webkit-inner-spin-button,
+.frame-count-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.frame-count-input[type='number'] {
+  -moz-appearance: textfield;
+}

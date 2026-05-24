@@ -1,0 +1,64 @@
+/* FileSelector 组件样式 */
+
+.file-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* 隐藏原生文件输入 */
+.file-selector-input {
+  display: none;
+}
+
+/* 选择视频按钮 */
+.file-selector-button {
+  /* 基础样式 */
+  padding: var(--space-3) var(--space-5);
+  border: none;
+  border-radius: var(--radius-md);
+
+  /* 字体 */
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: white;
+
+  /* 背景 */
+  background-color: var(--color-primary);
+
+  /* 交互 */
+  cursor: pointer;
+
+  /* 过渡 */
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.file-selector-button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.file-selector-button:active {
+  transform: scale(0.98);
+}
+
+.file-selector-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* 重置按钮样式 */
+.file-selector-button--reset {
+  background-color: var(--color-error);
+}
+
+.file-selector-button--reset:hover {
+  background-color: var(--color-error-hover, #c0392b);
+}
+
+.file-selector-button--reset:focus-visible {
+  outline: 2px solid var(--color-error);
+  outline-offset: 2px;
+}
